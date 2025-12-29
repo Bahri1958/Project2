@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/CSS/opmaak.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Momo+Trust+Sans:wght@200..800&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+  
+  
+      body {
+        font-family: 'SUSE Mono', monospace;
+        background-color: lightblue;
+        color: #333;
+        font-size: 22px;
+      }
+
+ .nav {
+        background: white;
+        padding: 1.5rem 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+
+      .nav .ini h1 {
+        color: #667eea;
+        margin-bottom: 0.3rem;
+      }
+
+      .nav .ini p {
+        color: #666;
+      }
+
+      .twededenavi ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin-top: 1rem;
+        padding: 0;
+      }
+
+      .twededenavi ul li a {
+        text-decoration: none;
+        color: #333;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: 0.3s;
+        display: block;
+      }
+
+      .twededenavi ul li a:hover {
+        color: white;
+        background-color: black;
+      }
+     
+    
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 90%;
+    padding: 0.9rem 1.2rem;
+    border: 2px solid #e9ecef;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-family: 'SUSE', sans-serif;
+    transition: all 0.3s ease;
+    background: white;
+    margin-bottom: 1.5rem;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+form select {
+    cursor: pointer;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 3rem;
+}
+
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+form input[type="submit"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    width: auto;
+    margin-bottom: 0;
+}
+
+form input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 35px rgba(102, 126, 234, 0.6);
+}
+
+form input[type="submit"]:active {
+    transform: translateY(-1px);
+}
+
+  </style>
+  <body>
+    <nav class="nav">
+      <div class="ini">
+        <h1>Mijn Portfolio Website</h1>
+        <p>Ibrahima Bahri</p>
+      </div>
+
+      <div class="twededenavi">
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="CV.html">CV</a></li>
+          <li><a href="Project-Ervaring.html">Project</a></li>
+          <li><a href="Hobby.html">Hobby/Interesse</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <form>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">Voornaam:</label>
+          <input type="text" id="fname" name="fname" required />
+        </div>
+        <div class="form-group">
+          <label for="lname">Achternaam:</label>
+          <input type="text" id="lname" name="lname" required />
+        </div>
+      </div>
+      <label for="email"> E-mail:</label><br />
+      <input type="email" id="email" name="email" required />
+      <div>
+        <select id="onderwerp" name="onderwerp" required>
+          <option value="">Kies een optie</option>
+          <option value="Analyse">Analyse</option>
+          <option value="Dashboard">Dashboard</option>
+          <option value="Business Analist">Business Analist</option>
+          <option value="Automatisatie">Automatisatie</option>
+          <option value="Anders">Anders</option>
+        </select>
+      </div>
+
+      <label for="text"> UW Vraag</label>
+      <div>
+        <textarea name="Vraag" id="Vraag"></textarea>
+      </div>
+      <div>
+        <label for="Verzenden">
+          <input
+            type="submit"
+            value="Verzenden"
+            id="Verzenden"
+            name="Verzenden"
+          />
+        </label>
+      </div>
+    </form>
+
+    <div class="dcontact">
+      <p>U kunt contact met mij opnemen via e-mail of telefoon.</p>
+      <a href="mailto:ibrahima.bahri">Outlook</a>
+      <a href="tel:+78954896">Call</a>
+      <a href="mailto:Ibahika"><img src="Linked in.png" alt="" /></a>
+    </div>
+  </body>
+</html>

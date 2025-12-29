@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/CSS/opmaak.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Momo+Trust+Sans:wght@200..800&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+    body {
+      font-family: "SUSE Mono", monospace;
+      background-color: lightblue;
+      color: #333;
+      font-size: 22px;
+    }
+
+    .nav {
+      background: white;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav .ini h1 {
+      color: #667eea;
+      margin-bottom: 0.3rem;
+    }
+
+    .nav .ini p {
+      color: #666;
+    }
+
+    .twededenavi ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+      padding: 0;
+    }
+
+    .twededenavi ul li a {
+      text-decoration: none;
+      color: #333;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: 0.3s;
+      display: block;
+    }
+
+    .twededenavi ul li a:hover {
+      color: white;
+      background-color: black;
+    }
+
+    .straatvoetbal img {
+      width: 500px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .reizen img {
+      width: 500px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .straatvoetbal,
+    .reizen {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+      margin: 2rem;
+    }
+  </style>
+
+  </head>
+  
+  <body>
+    <nav class="nav">
+      <div class="ini">
+        <h1>Mijn Portfolio Website</h1>
+        <p>Ibrahima Bahri</p>
+      </div>
+
+      <div class="twededenavi">
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="CV.html">CV</a></li>
+          <li><a href="Project-Ervaring.html">Project</a></li>
+          <li><a href="Hobby.html">Hobby/Interesse</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="straatvoetbal">
+      <h2>Straatvoetbal</h2>
+      <p>
+        Op het straatvoetbalveld leer ik meer dan alleen trucjes. Ik leer om
+        onder druk helder te denken, om te vertrouwen op mijn team en om te
+        blijven zoeken naar creatieve oplossingen. Diezelfde mentaliteit neem ik
+        mee in mijn werk als data professional: snel schakelen, samenwerken en
+        altijd verbeteren. Straatvoetbal herinnert me eraan dat elke uitdaging
+        een kans is om te groeien of het nu gaat om een wedstrijd of een
+        dataproject.
+      </p>
+      <p>
+        Het houdt me niet alleen fysiek fit, maar scherpt ook mijn focus,
+        doorzettingsvermogen en mentale veerkracht aan. De dynamiek van
+        straatvoetbal daagt me uit om flexibel te blijven, nieuwe technieken te
+        ontwikkelen en in elke situatie kansen te zien — precies zoals ik dat
+        doe bij complexe data-uitdagingen.
+      </p>
+      <img src="IMG/straatvoetbal (1).jpg"straatvoetbal actie" />
+    </div>
+
+    <div class="reizen">
+      <h2>Reizen</h2>
+      <p>
+        Reizen opent mijn blik op de wereld en leert me verschillende culturen
+        en perspectieven waarderen. Het ontdekken van nieuwe ideeën en manieren
+        van denken stimuleert mijn creativiteit en helpt me uit mijn comfortzone
+        te stappen. Door veranderingen flexibel te omarmen, kan ik uitdagingen
+        beter aanpakken. Net als straatvoetbal geven reizen mij energie,
+        motivatie en een frisse blik die ik meeneem in alles wat ik doe.
+        Daarnaast deel ik graag mijn ervaringen via foto’s en verhalen om
+        anderen te inspireren.
+      </p>
+      <img src="IMG/reizen.jpg" alt="reisfoto" />
+    </div>
+  </body>
+</html>
