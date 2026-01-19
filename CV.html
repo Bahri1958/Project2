@@ -1,425 +1,582 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="/CSS/opmaak.css" rel="stylesheet">
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV van Ibrahima Bahri - Data Analyst & IT Support Engineer">
+    <meta name="keywords" content="CV, Data Analyst, IT Support, Power BI, Tableau, Python">
+    <meta name="author" content="Ibrahima Bahri">
+    <title>CV - Ibrahima Bahri</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Sans:wght@200..800&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
- 
-  <style>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono:wght@100..800&display=swap" rel="stylesheet">
     
-      body {
-        font-family: 'SUSE Mono', monospace;
-        background-color: lightblue;
-        color: #333;
-        font-size: 22px;
-      }
-
- .nav {
-        background: white;
-        padding: 1.5rem 2rem;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-
-      .nav .ini h1 {
-        color: #667eea;
-        margin-bottom: 0.3rem;
-      }
-
-      .nav .ini p {
-        color: #666;
-      }
-
-      .twededenavi ul {
-        list-style: none;
-        display: flex;
-        gap: 2rem;
-        margin-top: 1rem;
-        padding: 0;
-      }
-
-      .twededenavi ul li a {
-        text-decoration: none;
-        color: #333;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        transition: 0.3s;
-        display: block;
-      }
-
-      .twededenavi ul li a:hover {
-        color: white;
-        background-color: black;
-      }
-     
+    <!-- Owl Carousel CSS (externe plug-in) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     
-#over h1 {
-    font-family: 'Momo Trust Sans', sans-serif;
-    color: #667eea;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    position: relative;
-    padding-bottom: 1rem;
-}
+    <style>
+        /* ===================================
+           Custom CSS voor CV Pagina
+           =================================== */
+        
+        /* ----- General Styling ----- */
+        body {
+            font-family: 'SUSE Mono', monospace;
+            background-color: #f8f9fa;
+            color: #333;
+        }
 
-#over h1::after {
-    
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #667eea, #764ba2);
-    border-radius: 2px;
-}
+        /* ----- Navbar Styling ----- */
+        .navbar {
+            transition: all 0.3s ease;
+        }
 
-#over p {
-    font-size: 1.1rem;
-    line-height: 1.9;
-    color: #555;
-    margin-bottom: 1.5rem;
-    text-align: justify;
-}
+        .brand-name {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
 
-/* Werkervaring sectie */
-#ervaring {
-    background: #f8f9fa;
-}
+        .brand-subtitle {
+            color: #666;
+            font-size: 0.75rem;
+            font-weight: normal;
+        }
 
-#ervaring h2 {
-    font-family: 'Momo Trust Sans', sans-serif;
-    color: #667eea;
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
+        .nav-link {
+            color: #333 !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
 
-.experience-item {
-    background: white;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    border-radius: 15px;
-    border-left: 5px solid #667eea;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-}
+        .nav-link:hover,
+        .nav-link.active {
+            color: white !important;
+            background-color: #667eea;
+        }
 
-.experience-item:last-child {
-    margin-bottom: 0;
-}
+        /* ----- Header Section ----- */
+        .cv-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+        }
 
-.experience-item:hover {
-    transform: translateX(8px);
-    box-shadow: 0 5px 25px rgba(102, 126, 234, 0.25);
-    border-left-color: #764ba2;
-}
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
 
-.experience-item h3 {
-    color: #764ba2;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-}
+        /* ----- Section Styling ----- */
+        .cv-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-.experience-item > p {
-    color: #667eea;
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
+        .cv-section h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
 
-.experience-item ul {
-    margin-left: 1.5rem;
-    margin-top: 1rem;
-}
+        .cv-section h2 i {
+            margin-right: 0.5rem;
+        }
 
-.experience-item li {
-    margin-bottom: 0.7rem;
-    color: #666;
-    line-height: 1.6;
-}
+        /* ----- Timeline Styling ----- */
+        .timeline-item {
+            padding-left: 2rem;
+            border-left: 3px solid #667eea;
+            margin-bottom: 2rem;
+            position: relative;
+        }
 
-.experience-item strong {
-    color: #667eea;
-    font-weight: 600;
-}
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: #667eea;
+        }
 
-/* Opleiding sectie */
-#opleiding {
-    background: white;
-}
+        .timeline-item h5 {
+            color: #667eea;
+            font-weight: bold;
+        }
 
-#opleiding h2 {
-    font-family: 'Momo Trust Sans', sans-serif;
-    color: #667eea;
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
+        .timeline-item .text-muted {
+            font-size: 0.9rem;
+        }
 
-.education-item {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    border-radius: 15px;
-    border-left: 5px solid #764ba2;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-}
+        /* ----- Language Progress Bars ----- */
+        .language-item {
+            margin-bottom: 1.5rem;
+        }
 
-.education-item:last-child {
-    margin-bottom: 0;
-}
+        .language-item h6 {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
 
-.education-item:hover {
-    transform: translateX(8px);
-    box-shadow: 0 5px 25px rgba(118, 75, 162, 0.25);
-    border-left-color: #667eea;
-}
+        .progress {
+            height: 25px;
+            border-radius: 10px;
+        }
 
-.education-item h3 {
-    color: #764ba2;
-    font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-    font-weight: 700;
-}
+        .progress-bar {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            font-weight: bold;
+        }
 
-.education-item p {
-    color: #666;
-    margin-bottom: 0.5rem;
-    line-height: 1.7;
-}
+        /* ----- Owl Carousel Styling ----- */
+        .skills-carousel {
+            padding: 2rem 0;
+        }
 
-.education-item p:first-of-type {
-    color: #667eea;
-    font-weight: 600;
-}
+        .skill-item {
+            text-align: center;
+            padding: 1rem;
+        }
 
-/* Skills sectie */
-#skills {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
-}
+        .skill-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin: 0 auto 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
 
-#skills h2 {
-    font-family: 'Momo Trust Sans', sans-serif;
-    color: #667eea;
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
+        .skill-item img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
 
-#skills h3 {
-    color: #764ba2;
-    font-size: 1.6rem;
-    margin-top: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
+        .skill-item h6 {
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
 
-.skills-grid,
-.language-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.2rem;
-}
+        /* Owl Carousel Navigation */
+        .owl-theme .owl-nav [class*='owl-'] {
+            background: #667eea !important;
+            color: white !important;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin: 5px;
+        }
 
-.skill-item,
-.language-item {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.05rem;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-    transition: all 0.3s ease;
-    cursor: default;
-}
+        .owl-theme .owl-nav [class*='owl-']:hover {
+            background: #764ba2 !important;
+        }
 
-.skill-item:hover,
-.language-item:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
-}
+        .owl-theme .owl-dots .owl-dot span {
+            background: #667eea !important;
+        }
 
-/* Contact/Download sectie */
+        /* ----- Footer ----- */
+        .footer {
+            background-color: #2d3748 !important;
+            border-top: 3px solid #667eea;
+        }
 
+        .social-icons a {
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
 
-#contact h2 {
-    font-family: 'Momo Trust Sans', sans-serif;
-    color: #667eea;
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-}
+        .social-icons a:hover {
+            transform: translateY(-3px);
+            opacity: 0.8;
+        }
 
-.download-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 1.2rem 3rem;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+        /* ----- Badge Styling ----- */
+        .badge-custom {
+            background-color: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
 
-.download-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 35px rgba(102, 126, 234, 0.6);
-}
-
-.download-btn:active {
-    transform: translateY(-2px);
-}
-
-
-@media (max-width: 992px) {
-    .container {
-        border-radius: 15px;
-    }
-
-    
-  </style>
-   </head>
-  <body>
-    <nav class="nav">
-      <div class="ini">
-        <h1>Mijn Portfolio Website</h1>
-        <p>Ibrahima Bahri</p>
-      </div>
-
-      <div class="twededenavi">
-        <ul>
-           <li><a href="Home.html">Home</a></li>
-          <li><a href="CV.html">CV</a></li>
-          <li><a href="Project-Ervaring.html">Project</a></li>
-          <li><a href="Hobby.html">Hobby/Interesse</a></li>
-          <li><a href="Contact.html">Contact</a></li>
-        </ul>
-      </div>
+        /* ----- Responsive ----- */
+        @media (max-width: 768px) {
+            .cv-header {
+                padding: 2rem 0;
+            }
+            
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .skill-item img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-name">Ibrahima Bahri</span>
+                <small class="d-block brand-subtitle">Data Analyst & IT Support</small>
+            </a>
+            
+            <!-- Hamburger menu button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="cv.html">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projecten.html">Projecten</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hobby.html">Hobby</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <div>
-     <div class="container">
-       <div id="over" class="section">
-    <h1>Over Mij</h1>
-    <p>
-        Ik ben een data-analist en -engineer met een sterke passie voor het
-        omzetten van ruwe, ongestructureerde data naar waardevolle en bruikbare
-        inzichten. Mijn kracht ligt in het combineren van analytisch
-        denkvermogen met diepgaande technische kennis om organisaties te helpen
-        beter onderbouwde beslissingen te nemen en processen te optimaliseren.
-    </p>
-    <p>
-        Mijn doel is om data toegankelijk en begrijpelijk te maken
-        voor zowel technische als niet-technische stakeholders. Door complexe
-        data te vertalen naar heldere visualisaties en duidelijke verhalen,
-        ondersteun ik besluitvorming op alle niveaus binnen een organisatie.
-        Dankzij mijn brede ervaring in zowel data-engineering als analyse kan ik
-        de brug slaan tussen techniek en strategie. Ik help organisaties om niet
-        alleen hun data beter te gebruiken, maar ook om datagedreven te denken
-        en te handelen — een essentieel onderdeel van groei en innovatie.
-    </p>
-</div>
 
-<div id="ervaring" class="section">
-    <h2>Werkervaring</h2>
+    <!-- CV Header -->
+    <section class="cv-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center mb-3 mb-md-0">
+                    <img src="images/profile.jpg" alt="Ibrahima Bahri" class="rounded-circle profile-photo">
+                </div>
+                <div class="col-md-9">
+                    <h1 class="display-5 fw-bold">Ibrahima Bahri</h1>
+                    <p class="lead mb-2">Data Analyst & IT Support Engineer</p>
+                    <p class="mb-0">
+                        <i class="bi bi-geo-alt-fill me-2"></i>Antwerpen, België
+                        <span class="mx-3">|</span>
+                        <i class="bi bi-envelope-fill me-2"></i>ibrahima.bahri@email.com
+                        <span class="mx-3">|</span>
+                        <i class="bi bi-telephone-fill me-2"></i>+32 123 45 67 89
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        
+        <!-- Opleiding -->
+        <div class="cv-section">
+            <h2><i class="bi bi-mortarboard-fill"></i>Opleiding</h2>
+            
+            <div class="timeline-item">
+                <h5>Bachelor Toegepaste Informatica</h5>
+                <p class="text-muted mb-2">
+                    <i class="bi bi-calendar3"></i> 2021 - 2024 | Thomas More Hogeschool, Antwerpen
+                </p>
+                <p>
+                    Specialisatie in Data Management en Business Intelligence. 
+                    Focus op database design, data analyse en visualisatie met Power BI en Tableau.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h5>Data Analyst Professional Certificate</h5>
+                <p class="text-muted mb-2">
+                    <i class="bi bi-calendar3"></i> 2023 - 2024 | Syntra Antwerpen
+                </p>
+                <p>
+                    Intensieve opleiding in data-analyse, Python programming, SQL, 
+                    en business intelligence tools. Inclusief praktijkprojecten en case studies.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h5>Secundair Onderwijs - Informatica & Wetenschappen</h5>
+                <p class="text-muted mb-2">
+                    <i class="bi bi-calendar3"></i> 2015 - 2021 | Sint-Jozefscollege, Antwerpen
+                </p>
+                <p>
+                    Diploma behaald met onderscheiding. Sterke basis in wiskunde, 
+                    programmeren en ICT-vaardigheden.
+                </p>
+            </div>
+        </div>
+
+        <!-- Werkervaring -->
+        <div class="cv-section">
+            <h2><i class="bi bi-briefcase-fill"></i>Werkervaring</h2>
+            
+            <div class="timeline-item">
+                <h5>IT Support Engineer</h5>
+                <p class="text-muted mb-2">
+                    <i class="bi bi-calendar3"></i> 2020 - Heden | Formaat VZW, Antwerpen
+                </p>
+                <ul>
+                    <li>Technische ondersteuning voor 100+ gebruikers</li>
+                    <li>Beheer en onderhoud van IT-infrastructuur</li>
+                    <li>Implementatie van automatiseringsoplossingen met Power Apps</li>
+                    <li>Troubleshooting hardware, software en netwerkproblemen</li>
+                    <li>Documentatie en training van eindgebruikers</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h5>Data Analyst (Stage)</h5>
+                <p class="text-muted mb-2">
+                    <i class="bi bi-calendar3"></i> 2023 - 2024 | Diverse Bedrijven
+                </p>
+                <ul>
+                    <li>Ontwikkeling van Power BI dashboards voor business analytics</li>
+                    <li>Data cleaning en transformatie met Python en SQL</li>
+                    <li>Analyse van laptop kosten en gebruikerstevredenheid</li>
+                    <li>Web scraping voor prijsvergelijking en marktanalyse</li>
+                    <li>Database design en implementatie (SQL Server & MongoDB)</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h5>Medewerker Verkeersveiligheid</h5>
+                <p class="text-muted mb-2">
+                    <i class="bi bi-calendar3"></i> 2019 - 2020 | Stad Antwerpen
+                </p>
+                <ul>
+                    <li>Toezicht op verkeersveiligheid in schoolomgevingen</li>
+                    <li>Communicatie met burgers en instanties</li>
+                    <li>Rapportage en documentatie van incidenten</li>
+                    <li>Samenwerking met politie en andere diensten</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Talenkennis -->
+        <div class="cv-section">
+            <h2><i class="bi bi-translate"></i>Talenkennis</h2>
+            
+            <div class="language-item">
+                <h6>Nederlands</h6>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        Moedertaal - 100%
+                    </div>
+                </div>
+            </div>
+
+            <div class="language-item">
+                <h6>Frans</h6>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                        Zeer goed - 85%
+                    </div>
+                </div>
+            </div>
+
+            <div class="language-item">
+                <h6>Engels</h6>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                        Uitstekend - 90%
+                    </div>
+                </div>
+            </div>
+
+            <div class="language-item">
+                <h6>Duits</h6>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                        Gemiddeld - 60%
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Carousel -->
+        <div class="cv-section">
+            <h2><i class="bi bi-star-fill"></i>Technische Vaardigheden</h2>
+            <p class="text-muted mb-4">Mijn expertise in verschillende technologieën en tools</p>
+            
+            <div class="owl-carousel owl-theme skills-carousel">
+                <div class="skill-item">
+                   
+                    <img src="IMG/Power BI.jpeg" alt="Power BI">
+                    <h6>Power BI</h6>
+                </div>
+                <div class="skill-item">
+                    <img src="IMG/Tableau (2).png" alt="Tableau">
+                    <h6>Tableau</h6>
+                </div>
+                <div class="skill-item">
+                    <img src="IMG/Python.jpeg" alt="Python">
+                    <h6>Python</h6>
+                </div>
+                <div class="skill-item">
+                    <img src="IMG/SQL Server.png" alt="SQL">
+                    <h6>SQL Server</h6>
+                </div>
+                <div class="skill-item">
+                    <img src="IMG/MongoDB.png" alt="MongoDB">
+                    <h6>MongoDB</h6>
+                </div>
+                <div class="skill-item">
+                    <img src="IMG/Excel.jpeg" alt="Excel">
+                    <h6>Excel</h6>
+                </div>
+                <div class="skill-item">
+                    <img src="IMG/HTML & CSS.jpeg" alt="HTML & CSS">
+                    <h6>HTML & CSS</h6>
+                </div>
+                <div class="skill-item">
+                    <img src="IMG/Bootstrap.jpeg" alt="Bootstrap">
+                    <h6>Bootstrap</h6>
+                </div>
+                <div class="skill-item">
+                    <img src="IMG/c.png" alt="C#">
+                    <h6>C#</h6>
+                </div>
+                <div class="skill-item">
+                    <img src="IMG/Git & GitHub.png" alt="Git">
+                    <h6>Git & GitHub</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Extra Vaardigheden -->
+        <div class="cv-section">
+            <h2><i class="bi bi-lightbulb-fill"></i>Andere Vaardigheden</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Soft Skills</h5>
+                    <span class="badge-custom">Probleemoplossend denken</span>
+                    <span class="badge-custom">Teamwork</span>
+                    <span class="badge-custom">Communicatie</span>
+                    <span class="badge-custom">Analytisch denken</span>
+                    <span class="badge-custom">Zelfstandig werken</span>
+                    <span class="badge-custom">Punctualiteit</span>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="mb-3">Tools & Software</h5>
+                    <span class="badge-custom">Power Apps</span>
+                    <span class="badge-custom">Microsoft Office</span>
+                    <span class="badge-custom">Visual Studio Code</span>
+                    <span class="badge-custom">Docker</span>
+                    <span class="badge-custom">Jira</span>
+                    <span class="badge-custom">Slack</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Copyright -->
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">
+                        &copy; 2024 Ibrahima Bahri - Portfolio
+                    </p>
+                    <small class="text-muted">Alle rechten voorbehouden</small>
+                </div>
+                
+                <!-- Column 2: Social Media -->
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-2">Volg mij op:</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/ibrahima-bahri" target="_blank" class="text-white me-3" title="LinkedIn">
+                            <i class="bi bi-linkedin fs-4"></i>
+                        </a>
+                        <a href="https://github.com/ibrahimabahri" target="_blank" class="text-white me-3" title="GitHub">
+                            <i class="bi bi-github fs-4"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" class="text-white me-3" title="Facebook">
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="text-white" title="Instagram">
+                            <i class="bi bi-instagram fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (vereist voor Owl Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
-    <div class="experience-item">
-        <h3>Data Analist</h3>
-        <ul>
-            <li>Dashboard ontwikkeling</li>
-            <li>SQL database queries en optimalisatie</li>
-            <li>Python voor data-analyse</li>
-            <li>Power BI en Tableau visualisaties</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>IT Support Engineer</h3>
-        <p>Formaat VZW</p>
-        <ul>
-            <li><strong>Hardware Installatie:</strong> laptops, desktop, printer</li>
-            <li><strong>Software:</strong> Beheer van Microsoft 365, SharePoint, CRM, Active Directory, Cloud</li>
-            <li><strong>Netwerk:</strong> Switch, Firewall, Router, Configuratie van Netwerk en bekabeling</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <h3>Verkeersveiligheid Medewerker</h3>
-        <p>Stad Antwerpen</p>
-        <p>
-            Ik zet me in voor het creëren van verkeersveilige schoolomgevingen en
-            het veiliger maken van het school-woonverkeer. Tijdens mijn
-            werkzaamheden heb ik veel ervaring opgedaan met observeren, rapporteren
-            en het signaleren van knelpunten in de verkeerssituatie rondom scholen.
-            Communicatie speelt hierbij een belangrijke rol, zowel in het contact
-            met collega's als met ouders, leerlingen en scholen. Daarnaast houd ik
-            me bezig met administratieve taken, zoals het bijhouden van
-            observatieverslagen, het verwerken van meldingen en het opstellen van
-            rapportages.
-        </p>
-    </div>
-</div>
-
-<div id="opleiding" class="section">
-    <h2>Studie & Opleiding</h2>
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <div class="education-item">
-        <h3>Graduaat Programmeren (Thomas More)</h3>
-        <p>Thomas More</p>
-        <p>September 2025 - heden</p>
-    </div>
-
-    <div class="education-item">
-        <h3>Data Analyst (Syntra)</h3>
-        <p>Syntra</p>
-        <p>Data Verzameling, analyse en visualisaties</p>
-        <p>September 2024 - December 2025</p>
-    </div>
-
-    <div class="education-item">
-        <h3>IT Support Systeem en Netwerkbeheer (LBC Berchem)</h3>
-        <p>Secundair Volwassenenonderwijs - LBC Berchem</p>
-        <p>September 2019 - Juni 2021</p>
-    </div>
-</div>
-
-<div id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-        <div class="skill-item">Management</div>
-        <div class="skill-item">Digital Marketing</div>
-        <div class="skill-item">Leadership</div>
-        <div class="skill-item">Critical Thinking</div>
-        <div class="skill-item">Negotiation</div>
-        <div class="skill-item">Data Analysis</div>
-    </div>
-
-    <h3 style="margin-top: 2rem;">Talen</h3>
-    <div class="language-grid">
-        <div class="language-item">Frans</div>
-        <div class="language-item">Nederlands</div>
-        <div class="language-item">Duits</div>
-        <div class="language-item">Engels</div>
-    </div>
-</div>
-
-<div id="contact" class="section" style="text-align: center;">
-    <h2>Download mijn CV</h2>
-   <a href="" class="download-btn" onclick="" return false;">📄 Download CV</a>
+    <!-- Owl Carousel JavaScript (externe plug-in) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     
-</div>
-    </div>
+    <!-- Skills Carousel Initialization -->
+    <script>
+        $(document).ready(function(){
+            $(".skills-carousel").owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

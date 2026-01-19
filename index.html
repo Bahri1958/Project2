@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio van Ibrahima Bahri - Data Analyst & IT Support Engineer"
+    />
+    <meta
+      name="keywords"
+      content="Portfolio, Data Analyst, IT Support, Power BI, Tableau"
+    />
+    <meta name="author" content="Ibrahima Bahri" />
+    <title>Portfolio - Ibrahima Bahri</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUSE+Mono:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+     
+      body {
+        font-family: "SUSE Mono", monospace;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      /*  Navbar Styling */
+      .navbar {
+        transition: all 0.3s ease;
+      }
+
+      .navbar-brand {
+        transition: color 0.3s ease;
+      }
+
+      .brand-name {
+        color: #667eea;
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+
+      .brand-subtitle {
+        color: #666;
+        font-size: 0.75rem;
+        font-weight: normal;
+      }
+
+      .nav-link {
+        color: #333 !important;
+        padding: 0.5rem 1rem !important;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: white !important;
+        background-color: #667eea;
+      }
+
+      /*  Hero Section  */
+      .hero-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 5rem 0;
+        margin-bottom: 0;
+      }
+
+      .hero-section h1 {
+        color: white;
+      }
+
+      .hero-section .lead {
+        color: rgba(255, 255, 255, 0.95);
+      }
+
+      .hero-image {
+        max-width: 350px;
+        width: 100%;
+        border: 5px solid white;
+      }
+
+      .hero-section .btn-primary {
+        background-color: white;
+        color: #667eea;
+        border: none;
+        font-weight: 600;
+      }
+
+      .hero-section .btn-primary:hover {
+        background-color: #f8f9fa;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero-section .btn-outline-secondary {
+        color: white;
+        border-color: white;
+      }
+
+      .hero-section .btn-outline-secondary:hover {
+        background-color: white;
+        color: #667eea;
+      }
+
+      /* Cards Section  */
+      .cards-section {
+        background-color: white;
+      }
+
+      .card-link {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .hover-card {
+        transition: all 0.3s ease;
+        border: none;
+      }
+
+      .hover-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+      }
+
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-title {
+        font-weight: bold;
+        font-size: 1.25rem;
+      }
+
+      .card-footer small {
+        font-weight: 600;
+      }
+
+      /* About Section  */
+      .about-section {
+        background-color: #f8f9fa;
+      }
+
+      .feature-icon {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+      }
+
+      /*  Footer */
+      .footer {
+        background-color: #2d3748 !important;
+        border-top: 3px solid #667eea;
+      }
+
+      .social-icons a {
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .social-icons a:hover {
+        transform: translateY(-3px);
+        opacity: 0.8;
+      }
+
+      /*  Responsive Design */
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 3rem 0;
+        }
+
+        .hero-section h1 {
+          font-size: 2rem;
+        }
+
+        .hero-image {
+          max-width: 250px;
+        }
+
+        .feature-icon {
+          width: 60px;
+          height: 60px;
+          font-size: 1.5rem;
+        }
+      }
+
+      /* Utility Classes */
+      .shadow-sm {
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+      }
+
+      .text-muted {
+        color: #adb5bd !important;
+      }
+    </style>
+  </head>
+  <body>
+   <!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="brand-name">Ibrahima Bahri</span>
+            <small class="d-block brand-subtitle">Data Analyst & IT Support</small>
+        </a>
+        
+        <!-- Hamburger menu button (responsive) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navigation links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CV.html">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Projecten.html">Projecten</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Hobby.html">Hobby</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section met Jumbotron -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold mb-4">Welkom op mijn Portfolio</h1>
+            <p class="lead mb-4">
+              Ik ben Ibrahima Bahri, een gemotiveerde Data Analyst en IT Support
+              Engineer met een passie voor datastrategie en digitale
+              transformatie. Ik help bedrijven hun digitale processen te
+              optimaliseren en data-gedreven beslissingen te nemen.
+            </p>
+           
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Ontdek Meer</h2>
+        <div class="row g-4">
+          <!-- Card 1: CV -->
+          <div class="col-md-4">
+            <a href="CV.html" class="card-link">
+              <div class="card h-100 shadow-sm hover-card">
+                
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="bi bi-file-person-fill text-primary me-2"></i>
+                    Mijn CV
+                  </h5>
+                  <p class="card-text">
+                    Bekijk mijn opleiding, werkervaring, vaardigheden en
+                    certificeringen. Vier jaar ervaring als IT Support Engineer
+                    en twee jaar in data-analyse.
+                  </p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                  <small class="text-primary"
+                    >Bekijk meer <i class="bi bi-arrow-right"></i
+                  ></small>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 2: Projecten -->
+          <div class="col-md-4">
+            <a href="Projecten.html" class="card-link">
+              <div class="card h-100 shadow-sm hover-card">
+               
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="bi bi-briefcase-fill text-success me-2"></i>
+                    Projecten
+                  </h5>
+                  <p class="card-text">
+                    Ontdek mijn projecten in Power BI, Tableau, Python en
+                    database management. Van dashboards tot automatisering en
+                    data-analyse.
+                  </p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                  <small class="text-success"
+                    >Bekijk meer <i class="bi bi-arrow-right"></i
+                  ></small>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 3: Hobby -->
+          <div class="col-md-4">
+            <a href="Hobby.html" class="card-link">
+              <div class="card h-100 shadow-sm hover-card">
+               
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="bi bi-heart-fill text-danger me-2"></i>
+                    Hobby's & Interesses
+                  </h5>
+                  <p class="card-text">
+                    Leer meer over mijn passies buiten werk: street football,
+                    reizen en het ontdekken van nieuwe culturen en
+                    technologieën.
+                  </p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                  <small class="text-danger"
+                    >Bekijk meer <i class="bi bi-arrow-right"></i
+                  ></small>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="mb-4">Data Strategie en Digitale Transformatie</h2>
+            <p class="lead">
+              Als Data Analyst help ik bedrijven en professionals hun data te
+              transformeren naar waardevolle inzichten. Met expertise in Power
+              BI, Tableau, Python en automatisering begeleid ik organisaties in
+              hun digitale transformatie.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-5 g-4">
+          <div class="col-md-4">
+            <div class="text-center">
+              <div
+                class="feature-icon bg-primary text-white rounded-circle mx-auto mb-3"
+              >
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <h5>Data Analyse</h5>
+              <p>
+                Power BI, Tableau en SQL voor diepgaande analyses en
+                visualisaties
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center">
+              <div
+                class="feature-icon bg-success text-white rounded-circle mx-auto mb-3"
+              >
+                <i class="bi bi-gear-fill"></i>
+              </div>
+              <h5>Automatisering</h5>
+              <p>Power Apps en Python voor slimme, schaalbare workflows</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center">
+              <div
+                class="feature-icon bg-info text-white rounded-circle mx-auto mb-3"
+              >
+                <i class="bi bi-diagram-3-fill"></i>
+              </div>
+              <h5>IT Support</h5>
+              <p>
+                Vier jaar ervaring met infrastructuur en technische
+                ondersteuning
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Copyright -->
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="mb-0">&copy; 2024 Ibrahima Bahri - Portfolio</p>
+            
+          </div>
+
+          <!-- Column 2: Social Media -->
+          <div class="col-md-6 text-md-end">
+            <p class="mb-2">Volg mij op:</p>
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/in/ibrahima-bahri"
+                target="_blank"
+                class="text-white me-3"
+                title="LinkedIn"
+              >
+                <i class="bi bi-linkedin fs-4"></i>
+              </a>
+              <a
+                href="https://github.com/ibrahimabahri"
+                target="_blank"
+                class="text-white me-3"
+                title="GitHub"
+              >
+                <i class="bi bi-github fs-4"></i>
+              </a>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                class="text-white me-3"
+                title="Facebook"
+              >
+                <i class="bi bi-facebook fs-4"></i>
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                class="text-white"
+                title="Instagram"
+              >
+                <i class="bi bi-instagram fs-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+ 
+  </body>
+</html>
